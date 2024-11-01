@@ -1,0 +1,26 @@
+.home-container {
+  background-image: url('/assets/images/gym-background.jpg'); 
+  background-size: cover; /* Pour couvrir tout l'espace disponible */
+  background-position: center; /* Pour centrer l'image */
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  color: white; /* Changez la couleur du texte si nécessaire pour un meilleur contraste */
+}
+
+h2, h3 {
+  margin-bottom: 20px;
+}
+
+.info-section, .contact-section {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Bordure blanche semi-transparente */
+  border-radius: 5px;
+  width: 80%;
+  background: rgba(0, 0, 0, 0.5); /* Fond noir semi-transparent pour améliorer la lisibilité */
+}
