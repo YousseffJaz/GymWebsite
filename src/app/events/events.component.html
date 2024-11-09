@@ -107,35 +107,36 @@
       </div>
     </div>
   </div>
-  
-</div>
-<!--
-      <img
-        src="https://i-sam.unimedias.fr/2024/06/20/cours-yoga.jpeg?auto=format,compress&cs=tinysrgb&w=1200 "/><br>
-      <p>joga</p>
-   
-      <img
-        src="" /><br>
-      <p>dance</p>
-    
-      <img
-        src="" /><br>
-      <p>cardio booxing</p>
-    
-      <img
-        src="" /> <br>
-      <p>cardio velo</p>
-   
-      <img
-        src="" /><br>
+</div><br>
+<hr>
+<div class="evenements-container">
+  <ul>
+    <li *ngFor="let evenement of evenement">
+      <h3>{{ evenement.nom }}</h3>
+      <p>{{ evenement.date }}</p>
+      <p>{{ evenement.description }}</p>
+    </li>
+  </ul>
 
-      <p>step cours</p>
-    
-      <img
-        src="" /><br>
-      <p>cours cardio femme</p>
-    
--->
+  <h3 class="form-title">Reserver un événement</h3>
+  <form (ngSubmit)="onSubmit()" class="evenement-form">  
+    <label for="nomEvenement">Nom de l'événement</label>
+    <input type="text" id="nomEvenement" [(ngModel)]="nomEvenement" name="nomEvenement" required>
+
+    <label for="description">Description</label>
+    <textarea id="description" [(ngModel)]="description" name="description" required></textarea>
+
+    <label for="dateEvenement">Date de l'événement</label>
+    <input type="date" id="dateEvenement" [(ngModel)]="dateEvenement" name="dateEvenement" required>
+
+    <label for="email">Email de la personne</label>
+    <input type="email" id="email" [(ngModel)]="email" name="email" required>
+
+    <button type="submit">Reservez</button>
+
+  </form>
+</div>
+
 <script>
 var flipCheck = 0;
 

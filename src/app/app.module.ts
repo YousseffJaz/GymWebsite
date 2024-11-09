@@ -8,24 +8,24 @@ import { RegisterComponent } from './register/register.component';
 import { AppRoutingModule } from './app.routes';
 import { AuthService } from './services/auth.service';
 import { HomeComponent } from './home/home.component';
-import { EventsComponent } from './events/events.component';
-import { EquipmentComponent } from './equipment/equipment.component';
+import { EvenementComponent } from './events/events.component';  // Corrigé : Importation d'EvenementComponent
+import { EquipmentComponent } from './equipment/equipment.component';  // Corrigé : Importation d'EquipmentComponent
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent,
+  declarations: [
+    AppComponent,
     RegisterComponent,
-    HomeComponent
-  ], // Seul AppComponent est déclaré ici
+    HomeComponent,
+    EvenementComponent,   // Ajoutez EvenementComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule,
-     // Importation des composants autonomes
-    
-    EventsComponent,
-    EquipmentComponent
+    FormsModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
