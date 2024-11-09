@@ -1,20 +1,33 @@
 <div class="home-container">
-  <h2>Welcome to the Gym</h2>
-  <p>Please register or login to access our services.</p>
-  <div>
-      <a routerLink="/register" class="btn btn-primary">Register</a>
-      <a routerLink="/login" class="btn btn-secondary">Login</a>
+    <header class="hero-section">
+      <img src="assets/images/hero-bg.jpg" alt="Hero Background" />
+      <div class="hero-text">
+        <h1>Bienvenue à Notre Gym</h1>
+        <p>Rejoignez-nous pour atteindre vos objectifs de fitness</p>
+        <button (click)="navigateTo('register')" class="cta-button">Contact</button>
+      </div>
+    </header>
+  
+    <!-- Section des services -->
+    <section class="services-section">
+      <h2>Nos Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <img src="assets/images/musclation.jpg" alt="Musculation" />
+          <h3>Musculation</h3>
+          <p>Renforcez vos muscles avec nos équipements de musculation de pointe.</p>
+        </div>
+        <div class="service-card">
+          <img src="assets/images/yoga.jpg" alt="Yoga" />
+          <h3>Yoga</h3>
+          <p>Améliorez votre flexibilité et votre bien-être avec nos cours de yoga.</p>
+        </div>
+        <div class="service-card">
+          <img src="assets/images/coaching.jpg" alt="Coaching" />
+          <h3>Coaching Personnel</h3>
+          <p>Obtenez un accompagnement personnalisé pour atteindre vos objectifs.</p>
+        </div>
+      </div>
+    </section>
   </div>
   
-  <!-- Section d'information -->
-  <div class="info-section">
-      <h3>About Us</h3>
-      <p>We offer a variety of classes and equipment to help you achieve your fitness goals.</p>
-  </div>
-
-  <!-- Section de contact -->
-  <div class="contact-section">
-      <h3>Contact Us</h3>
-      <p>For more information, email us at <a href="mailto:contact@gym.com">contactgym.com</a></p>
-  </div>
-</div>

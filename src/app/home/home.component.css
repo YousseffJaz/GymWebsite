@@ -1,26 +1,79 @@
+/* Style de base pour le conteneur principal */
 .home-container {
-  background-image: url('/assets/images/gym-background.jpg'); 
-  background-size: cover; /* Pour couvrir tout l'espace disponible */
-  background-position: center; /* Pour centrer l'image */
-  min-height: 100vh; 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Styles pour la section de l'en-tête */
+.hero-section {
+  position: relative;
   text-align: center;
-  padding: 20px;
-  color: white; /* Changez la couleur du texte si nécessaire pour un meilleur contraste */
+  color: white;
+  overflow: hidden; /* Cache toute partie de l'image qui dépasse */
 }
 
-h2, h3 {
-  margin-bottom: 20px;
+.hero-section img {
+  width: 100%; /* Largeur pleine */
+  height: 400px; /* Hauteur personnalisée, ajustez comme nécessaire */
+  object-fit: cover; /* Assure que l'image couvre toute la section */
 }
 
-.info-section, .contact-section {
-  margin-top: 20px;
-  padding: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.5); /* Bordure blanche semi-transparente */
-  border-radius: 5px;
-  width: 80%;
-  background: rgba(0, 0, 0, 0.5); /* Fond noir semi-transparent pour améliorer la lisibilité */
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
+.cta-button {
+  background-color: #ff6347; /* Couleur du bouton */
+  color: white; /* Couleur du texte */
+  padding: 10px 20px; /* Espacement interne */
+  border: none; /* Supprime la bordure par défaut */
+  cursor: pointer; /* Change le curseur pour indiquer un clic */
+  border-radius: 5px; /* Coins arrondis */
+  transition: background-color 0.3s; /* Animation pour le survol */
+}
+
+.cta-button:hover {
+  background-color: #e5533b; /* Couleur du bouton au survol */
+}
+
+/* Styles pour la section des services */
+.services-section {
+  padding: 20px; /* Espacement autour de la section */
+  text-align: center; /* Centre le texte */
+}
+
+.services-grid {
+  display: flex; /* Utilise flexbox pour l'agencement */
+  gap: 20px; /* Espace entre les cartes de service */
+  justify-content: center; /* Centre les éléments horizontalement */
+  flex-wrap: wrap; /* Permet aux éléments de se déplacer à la ligne */
+}
+
+.service-card {
+  background-color: #f4f4f4; /* Couleur de fond des cartes */
+  padding: 15px; /* Espacement interne */
+  border-radius: 8px; /* Coins arrondis */
+  width: 200px; /* Largeur fixe pour les cartes */
+  text-align: center; /* Centre le texte à l'intérieur des cartes */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  transition: transform 0.3s; /* Animation pour l'effet de survol */
+}
+
+.service-card:hover {
+  transform: translateY(-5px); /* Légère élévation au survol */
+}
+
+.service-card img {
+  width: 100%; /* Assurez-vous que les images s'ajustent correctement */
+  height: auto; /* Maintient le rapport hauteur/largeur */
+  border-radius: 5px; /* Coins arrondis pour les images */
+}
+
+.events-section, .testimonials-section {
+  padding: 20px; 
+  text-align: center; 
+}
+
